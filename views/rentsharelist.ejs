@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="stylesheets/uikit/uikit.min.css" />
+    </head>
+    <body dir="rtl">
+        <input id="newsharebutton" type="button" class="uk-animation-slide-top uk-button uk-button-primary uk-width-1-1" value="הוסף שכר דירה" uk-toggle="target: #interaction-modal">
+        <div id="search" class="uk-width-1-1 uk-container uk-container-center" style="background-color: grey;color:white; text-align: center;">
+            <span  >חיפוש:</span><br>
+            <form class="uk-search" data-uk-search>
+                
+                <label for="city-search">עיר:</label>
+                <input id="city-search" class="uk-search-field" type="search" placeholder="" list="cities">
+                <datalist id="cities"><%cities.forEach(city=>{%><option value="<%=city.name%>"><%})%></datalist>
+                
+                <label for="from-rooms-search">מחדרים:</label>
+                <select id="from-rooms-search"><option>בחר</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                
+                <label for="to-rooms-search">עד חדרים:</label>
+                <select id="to-rooms-search"><option>בחר</option>
+                    <option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option>
+                    <option>7</option><option>8</option><option>9</option><option>10</option><option>11</option><option>12</option>
+                </select>
+                
+                <input id="search-submit" type="submit" class="uk-button uk-button-small uk-button-primary" value="חפש">
+
+            </form>
+        </div>
+        <div>
+        <table class="uk-table uk-width-5-6">
+            <thead>
+                <tr>
+                    <td style="text-align: center">עיר</td>
+                    <td style="text-align: center">שכונה</td>
+                    <td style="text-align: center">חדרים</td>
+                    <td style="text-align: center">גודל</td>
+                    <td style="text-align: center">מחיר</td>
+                    <td style="text-align: center">פורסם בתאריך</td>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button onclick="AddPostsToView()" class="uk-button uk-button-primary uk-width-1-1">הצג עוד</button>
+    <div id="interaction-modal" uk-modal>
+        <div class="uk-modal-dialog uk-modal-body">
+            <div id="form-interact" class="uk-text-right"></div>
+        </div>
+    </div>
+
+<input id="posts" type="hidden" value="<%=JSON.stringify(posts)%>">
+<input id="user" type="hidden" value="<%=JSON.stringify(user)%>">
+
+    <script src="javascript/jquery-3.2.1.min.js"></script>
+    <script src="javascript/uikit/uikit.min.js"></script>
+    <script src="javascript/uikit/uikit-icons.min.js"></script>
+    <script src="javascript/newshare.js"></script>
+    </body>
+</html>
+

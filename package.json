@@ -1,0 +1,23 @@
+{
+  "name": "rentshare",
+  "version": "1.0.0",
+  "description": "App for sharing rent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Edi Gal",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "ejs": "^2.5.6",
+    "express": "^4.15.2",
+    "express-session": "^1.15.2",
+    "mongodb": "^2.2.25",
+    "mongoskin": "^2.1.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "^2.4.2"
+  }
+}

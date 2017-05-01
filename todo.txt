@@ -1,0 +1,17 @@
+v - register
+v - ajax login
+v - create fields(userID and etc.)
+v - beauty table
+v - admin delete posts
+v - count first look table
+v - white spaces on valid
+v - alert on post ?
+v - user exist message on register
+v - validate fields
+v - search by fields
+X - chat
+- mark rating price
+- scripts in input
+- save sessioms after restars server 
+- https
+- cancel dialog

@@ -1,0 +1,10 @@
+<form method="post" action="/post" class="uk-text-right">
+    <h2 id="modaltitle" class="uk-modal-title">שלום <%=user.userName%></h2>
+    <input id="newpost-city" list="cities" onchange="CheckCity()" name="City" type="text" class="uk-input uk-text-right" placeholder="עיר" style="margin-bottom: 5px;">
+    <input id="newpost-area" name="Area" type="text" class="uk-input"  placeholder="אזור" style="margin-bottom: 5px;">
+    <input id="newpost-rooms" name="Rooms" type="number" max="15" min="1" class="uk-input" placeholder="חדרים" style="margin-bottom: 5px;">
+    <input id="newpost-meter" name="Meter" type="number" max="800" min="10" class="uk-input" placeholder="גודל" style="margin-bottom: 5px;">
+    <input id="newpost-cost" name="Cost" type="number" max="25000" min="100" class="uk-input" placeholder="מחיר" style="margin-bottom: 5px;">
+    <input id="postnewrentsharebutton" type="button" onclick="PostNewShareButton()" value="שתף" class="uk-button uk-button-primary">
+    <datalist id="cities"><%cities.forEach(city=>{%><option value="<%=city.name%>"><%})%></datalist>
+</form>
